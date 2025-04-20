@@ -1,8 +1,7 @@
 /* 폰트 정의 */
 @font-face {
     font-family: 'Paperlogy';
-    src: url('fonts/Paperlogy-Light.woff2') format('woff2'),
-         url('fonts/Paperlogy-Light.woff') format('woff');
+    src: url('fonts/Paperlogy-3Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -10,8 +9,7 @@
 
 @font-face {
     font-family: 'Paperlogy';
-    src: url('fonts/Paperlogy-Regular.woff2') format('woff2'),
-         url('fonts/Paperlogy-Regular.woff') format('woff');
+    src: url('fonts/Paperlogy-4Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -19,8 +17,7 @@
 
 @font-face {
     font-family: 'Paperlogy';
-    src: url('fonts/Paperlogy-Medium.woff2') format('woff2'),
-         url('fonts/Paperlogy-Medium.woff') format('woff');
+    src: url('fonts/Paperlogy-5Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -28,8 +25,7 @@
 
 @font-face {
     font-family: 'Paperlogy';
-    src: url('fonts/Paperlogy-Bold.woff2') format('woff2'),
-         url('fonts/Paperlogy-Bold.woff') format('woff');
+    src: url('fonts/Paperlogy-7Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -37,8 +33,7 @@
 
 @font-face {
     font-family: 'Paperlogy';
-    src: url('fonts/Paperlogy-Black.woff2') format('woff2'),
-         url('fonts/Paperlogy-Black.woff') format('woff');
+    src: url('fonts/Paperlogy-9Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
