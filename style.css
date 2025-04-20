@@ -72,26 +72,29 @@ header {
     width: 100%;
     max-width: 1000px;
     height: 70px;
-    background-color: #ffffff;
+    background: linear-gradient(135deg, #4285f4, #2b5ab3);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
+    padding: 0 15px;
     position: fixed;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 0 0;
+    margin: 0 auto;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #4285f4;
+    color: #ffffff;
     margin-left: 15px;
 }
 
 .logo span {
-    color: #34a853;
+    color: #ffffff;
+    opacity: 0.9;
 }
 
 nav ul {
@@ -105,100 +108,19 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #555;
+    color: #ffffff;
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #4285f4;
+    color: #ffffff;
+    opacity: 0.8;
 }
 
-/* 배너와 광고 래퍼 스타일 */
-.banner-ad-wrapper {
-    display: flex;
-    width: 100%;
-    max-width: 1000px;
-    margin-top: 80px;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 0;
-}
-
-.banner {
-    width: calc(70% - 10px);
-    height: 400px;
-    background-color: #ffffff;
-    margin-top: 0;
-    padding: 15px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    flex: 1 1 600px;
-}
-
-.banner-side-ad {
-    width: calc(30% - 10px);
-    height: 400px;
-    background-color: #ffffff;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    flex: 1 1 280px;
-    overflow: hidden;
-}
-
-.banner-side-ad .adsbygoogle {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.banner-slider {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.slide {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.8s ease;
-}
-
-.slide.active {
-    opacity: 1;
-}
-
-.slide-content {
-    width: 50%;
-    padding: 30px 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.slide-content h1 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.slide-content p {
-    font-size: 1rem;
-    margin-bottom: 25px;
-    color: #666;
-    line-height: 1.6;
-}
-
-.btn {
+/* 버튼 스타일 */
+.btn, .download-btn {
     background-color: #4285f4;
     color: white;
     border: none;
@@ -213,60 +135,10 @@ nav ul li a:hover {
     width: fit-content;
 }
 
-.btn:hover {
+.btn:hover, .download-btn:hover {
     background-color: #3367d6;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
-}
-
-.slide-image {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 45%;
-    height: 70%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 8px;
-}
-
-#snipaste-img {
-    background-image: url('img/snipaste-banner.jpg');
-    background-color: #f0f5ff;
-}
-
-#everything-img {
-    background-image: url('img/everything-banner.jpg');
-    background-color: #f0f9ff;
-}
-
-#photoscape-img {
-    background-image: url('img/photoscape-banner.jpg');
-    background-color: #f0fff4;
-}
-
-.slider-controls {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #ddd;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.dot.active {
-    background-color: #4285f4;
 }
 
 /* 애드센스 광고 섹션 스타일 */
@@ -278,7 +150,9 @@ nav ul li a:hover {
     padding: 0;
     display: block;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    margin-top: 20px;
+    margin-top: 10px;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 .ad-container {
@@ -287,6 +161,7 @@ nav ul li a:hover {
     min-height: 250px;
     display: block;
     overflow: hidden;
+    border-radius: 12px;
 }
 
 .adsbygoogle {
@@ -296,37 +171,32 @@ nav ul li a:hover {
     min-height: 250px;
 }
 
-.adsense h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.ad-placeholder {
-    color: #aaa;
-    font-size: 18px;
-}
-
 /* 카드 섹션 스타일 */
 .cards {
     width: 100%;
     max-width: 1000px;
-    padding: 15px 0;
+    padding: 0 0 5px 0;
     background-color: #f8f9fa;
-    margin-top: 20px;
+    margin-top: 80px;
+    margin-bottom: 5px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .cards h2 {
     font-size: 1.75rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-align: center;
     color: #333;
+    padding-top: 15px;
 }
 
 .card-container {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    padding: 0 15px 5px;
 }
 
 .card {
@@ -338,7 +208,7 @@ nav ul li a:hover {
     transition: transform 0.3s, box-shadow 0.3s;
     opacity: 0;
     transform: translateY(30px);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .card:hover {
@@ -445,10 +315,11 @@ nav ul li a:hover {
 footer {
     width: 100%;
     max-width: 1000px;
-    padding: 30px 0;
+    padding: 30px 15px;
     background-color: #ffffff;
-    margin-top: 20px;
+    margin-top: 10px;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 12px 12px 0 0;
 }
 
 .footer-content {
@@ -491,36 +362,17 @@ footer {
     font-size: 0.875rem;
     text-align: center;
     line-height: 1.6;
+    padding: 0 15px;
 }
 
 /* 미디어 쿼리 - 모바일 반응형 */
 @media only screen and (max-width: 768px) {
-    body .banner-ad-wrapper {
-        flex-direction: column;
-        margin-top: 60px !important;
-    }
-    
-    body .banner {
-        width: 100% !important;
-        max-height: 250px !important;
-        height: 250px !important;
-    }
-    
-    body .slide-content {
-        width: 100% !important;
-        padding: 10px !important;
-    }
-    
-    body .slide-image {
-        display: none !important;
+    body .cards {
+        margin-top: 60px;
     }
     
     body header {
         height: 50px !important;
-    }
-    
-    body .banner-side-ad {
-        display: none !important;
     }
     
     .logo {
@@ -549,20 +401,15 @@ footer {
 }
 
 @media only screen and (max-width: 480px) {
-    body .banner-ad-wrapper {
-        margin-top: 55px !important;
-    }
-    
-    body .banner {
-        height: 200px !important;
-        max-height: 200px !important;
+    body .cards {
+        margin-top: 55px;
     }
     
     .slide-content h1 {
         font-size: 1.25rem;
     }
     
-    .btn {
+    .btn, .download-btn {
         padding: 8px 15px;
         font-size: 0.75rem;
     }
