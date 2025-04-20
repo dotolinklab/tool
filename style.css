@@ -347,23 +347,16 @@ footer {
 /* 미디어 쿼리 - 모바일 반응형 */
 @media only screen and (max-width: 768px) {
     body .cards {
-        margin-top: 60px;
+        margin-top: 80px;
     }
     
     body header {
         height: 50px !important;
+        top: 10px;
     }
     
     .logo {
-        margin-bottom: 10px;
-    }
-    
-    nav ul li {
-        margin-left: 10px;
-    }
-    
-    nav ul li a {
-        font-size: 0.875rem;
+        margin: 0 auto;
     }
     
     .card-container {
@@ -381,11 +374,16 @@ footer {
 
 @media only screen and (max-width: 480px) {
     body .cards {
-        margin-top: 55px;
+        margin-top: 60px;
     }
     
-    .slide-content h1 {
-        font-size: 1.25rem;
+    body header {
+        height: 50px !important;
+        top: 15px;
+    }
+    
+    .logo {
+        font-size: 18px;
     }
     
     .btn, .download-btn {
