@@ -1,0 +1,581 @@
+/* 폰트 정의 */
+@font-face {
+    font-family: 'Paperlogy';
+    src: url('fonts/Paperlogy-Light.woff2') format('woff2'),
+         url('fonts/Paperlogy-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperlogy';
+    src: url('fonts/Paperlogy-Regular.woff2') format('woff2'),
+         url('fonts/Paperlogy-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperlogy';
+    src: url('fonts/Paperlogy-Medium.woff2') format('woff2'),
+         url('fonts/Paperlogy-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperlogy';
+    src: url('fonts/Paperlogy-Bold.woff2') format('woff2'),
+         url('fonts/Paperlogy-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperlogy';
+    src: url('fonts/Paperlogy-Black.woff2') format('woff2'),
+         url('fonts/Paperlogy-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* 기본 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Paperlogy', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+    padding: 0;
+}
+
+/* 헤더 스타일 */
+header {
+    width: 100%;
+    max-width: 1000px;
+    height: 70px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4285f4;
+    margin-left: 15px;
+}
+
+.logo span {
+    color: #34a853;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-right: 15px;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #555;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #4285f4;
+}
+
+/* 배너와 광고 래퍼 스타일 */
+.banner-ad-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 80px;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.banner {
+    width: calc(70% - 10px);
+    height: 400px;
+    background-color: #ffffff;
+    margin-top: 0;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    flex: 1 1 600px;
+}
+
+.banner-side-ad {
+    width: calc(30% - 10px);
+    height: 400px;
+    background-color: #ffffff;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    flex: 1 1 280px;
+    overflow: hidden;
+}
+
+.banner-side-ad .adsbygoogle {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide-content {
+    width: 50%;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slide-content h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.slide-content p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.btn {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.btn:hover {
+    background-color: #3367d6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
+}
+
+.slide-image {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45%;
+    height: 70%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;
+}
+
+#snipaste-img {
+    background-image: url('img/snipaste-banner.jpg');
+    background-color: #f0f5ff;
+}
+
+#everything-img {
+    background-image: url('img/everything-banner.jpg');
+    background-color: #f0f9ff;
+}
+
+#photoscape-img {
+    background-image: url('img/photoscape-banner.jpg');
+    background-color: #f0fff4;
+}
+
+.slider-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #4285f4;
+}
+
+/* 애드센스 광고 섹션 스타일 */
+.adsense {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    background-color: #fff;
+    padding: 0;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+}
+
+.ad-container {
+    width: 100%;
+    height: auto;
+    min-height: 250px;
+    display: block;
+    overflow: hidden;
+}
+
+.adsbygoogle {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+}
+
+.adsense h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.ad-placeholder {
+    color: #aaa;
+    font-size: 18px;
+}
+
+/* 카드 섹션 스타일 */
+.cards {
+    width: 100%;
+    max-width: 1000px;
+    padding: 15px 0;
+    background-color: #f8f9fa;
+    margin-top: 20px;
+}
+
+.cards h2 {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1 1 280px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(30px);
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+#snipaste {
+    border-top: 4px solid #4285f4;
+}
+
+#everything {
+    border-top: 4px solid #fbbc05;
+}
+
+#photoscape {
+    border-top: 4px solid #34a853;
+}
+
+.card-icon {
+    font-size: 36px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.card p {
+    font-size: 0.875rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.features li {
+    padding: 6px 0;
+    font-size: 0.875rem;
+    color: #555;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #34a853;
+}
+
+.download-btn {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+#snipaste .download-btn {
+    background-color: #4285f4;
+}
+
+#snipaste .download-btn:hover {
+    background-color: #3367d6;
+    box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
+}
+
+#everything .download-btn {
+    background-color: #fbbc05;
+    color: #333;
+}
+
+#everything .download-btn:hover {
+    background-color: #f5a800;
+    box-shadow: 0 4px 12px rgba(251, 188, 5, 0.3);
+}
+
+#photoscape .download-btn {
+    background-color: #34a853;
+}
+
+#photoscape .download-btn:hover {
+    background-color: #2d9045;
+    box-shadow: 0 4px 12px rgba(52, 168, 83, 0.3);
+}
+
+/* 푸터 스타일 */
+footer {
+    width: 100%;
+    max-width: 1000px;
+    padding: 30px 0;
+    background-color: #ffffff;
+    margin-top: 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #4285f4;
+}
+
+.footer-logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #4285f4;
+    margin-bottom: 10px;
+}
+
+.footer-logo span {
+    color: #34a853;
+}
+
+.copyright {
+    color: #999;
+    font-size: 0.875rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* 미디어 쿼리 - 모바일 반응형 */
+@media only screen and (max-width: 768px) {
+    body .banner-ad-wrapper {
+        flex-direction: column;
+        margin-top: 60px !important;
+    }
+    
+    body .banner {
+        width: 100% !important;
+        max-height: 250px !important;
+        height: 250px !important;
+    }
+    
+    body .slide-content {
+        width: 100% !important;
+        padding: 10px !important;
+    }
+    
+    body .slide-image {
+        display: none !important;
+    }
+    
+    body header {
+        height: 50px !important;
+    }
+    
+    body .banner-side-ad {
+        display: none !important;
+    }
+    
+    .logo {
+        margin-bottom: 10px;
+    }
+    
+    nav ul li {
+        margin-left: 10px;
+    }
+    
+    nav ul li a {
+        font-size: 0.875rem;
+    }
+    
+    .card-container {
+        flex-direction: column;
+    }
+    
+    .card {
+        width: 100%;
+    }
+    
+    .footer-links a {
+        margin: 0 10px 10px 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body .banner-ad-wrapper {
+        margin-top: 55px !important;
+    }
+    
+    body .banner {
+        height: 200px !important;
+        max-height: 200px !important;
+    }
+    
+    .slide-content h1 {
+        font-size: 1.25rem;
+    }
+    
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.75rem;
+    }
+    
+    .cards h2, .adsense h2 {
+        font-size: 1.25rem;
+    }
+    
+    .card-container {
+        flex-direction: column;
+    }
+    
+    .card {
+        width: 100%;
+    }
+} 
